@@ -17,11 +17,12 @@ yt = YTMusic(auth)
 
 @app.route('/search/<query>')
 def search_ytmusic(query):
-    search_results = yt.search(query)
-    title = search_results[0]['title']
-    video_id = search_results[0]['videoId']
-    video_url = f"https://www.youtube.com/watch?v={video_id}.com"
-    return jsonify({'results': search_results, 'title': title, 'video_url': video_url})
+    #search_results = yt.search(query)
+    #title = search_results[0]['title']
+    #video_id = search_results[0]['videoId']
+    #video_url = f"https://www.youtube.com/watch?v={video_id}.com"
+    #return jsonify({'results': search_results, 'title': title, 'video_url': video_url})
+    return jsonify({'results': query, 'title': query, 'video_url': query})
 
 if __name__ == '__main__':
     app.run()
